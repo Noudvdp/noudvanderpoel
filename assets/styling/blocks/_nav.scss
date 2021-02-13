@@ -1,0 +1,75 @@
+@import "colors";
+
+$animate: all 0.2s ease-in-out;
+
+section#nav {
+    position: fixed;
+    right: 30px;
+    top: 30px;
+    z-index: 50;
+
+    &.under-header {
+        .nav-item {
+            color: $dark;
+
+            span {
+                &:before,
+                &:after {
+                    background: $dark;
+                }
+            }
+        }
+    }
+
+    .nav-item {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        color: $white;
+        text-decoration: none;
+        margin-left: 10px;
+
+        span {
+            text-align: center;
+            margin: 0 auto;
+            padding: 0;
+            transition: $animate;
+            position: relative;
+            font-family: "Montserrat", sans-serif;
+
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                width: 0;
+                height: 2px;
+                margin: 5px 0 0;
+                transition: $animate;
+                transition-duration: 0.4s;
+                opacity: 0;
+                background-color: $white;
+            }
+
+            &:before {
+                left: 50%;
+            }
+
+            &:after {
+                right: 50%;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            span {
+                &:before,
+                &:after {
+                    opacity: 1;
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import "colors";
+
+section.intro {
+    padding: 80px 0 500px;
+    position: relative;
+    z-index: 12;
+
+    .img-wrapper {
+        width: 50%;
+        position: relative;
+
+        &::after {
+            content: "";
+            background: url(/assets/img/yellow-blob.svg) no-repeat center center/contain;
+            position: absolute;
+            top: -190px;
+            right: -220px;
+            width: 500px;
+            height: 501px;
+            z-index: 11;
+            display: none;
+        }
+    }
+
+    .profile-picture {
+        filter: grayscale(0.5);
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 #00000059;
+        position: relative;
+        z-index: 20;
+    }
+}

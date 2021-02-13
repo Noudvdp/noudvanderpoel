@@ -1,0 +1,22 @@
+@import "blocks/colors";
+@import "blocks/fonts";
+@import "blocks/header";
+@import "blocks/intro";
+@import "blocks/nav";
+
+.content-block {
+    a {
+        color: $primary;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+* {
+   &::selection {
+       color: $white;
+       background: rgba(255,132,0,0.5);
+   }
+}
