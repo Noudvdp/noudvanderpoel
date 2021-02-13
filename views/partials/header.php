@@ -2,11 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-12 text-center">
-                <h1>
+                <h1 data-aos="fade-up">
                     Welcome
                 </h1>
-                <h3>
-                    I am a webdeveloper based in echt
+                <h3 data-aos="fade-up" data-aos-delay="500">
+                    I am a webdeveloper based in Echt
                 </h3>
             </div>
         </div>

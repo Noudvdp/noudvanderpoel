@@ -1,3 +1,5 @@
 $(document).ready(function (){
-   console.log("Js/jquery working");
+   AOS.init({
+      duration: 800,
+   });
 });

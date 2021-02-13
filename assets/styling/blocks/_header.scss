@@ -28,14 +28,38 @@ section.header {
         }
 
         &::after {
+            content: "";
             position: absolute;
-            top: 0;
-            left: 0;
+            bottom: 0;
+            left: 2%;
             z-index: 4;
-            width: 100%;
-            height: 100%;
-            background: #2c316e;
+            width: 96%;
+            height: 98%;
+            background: transparent;
+            box-shadow: 0 0 20px 14px #2c316e;
             border-radius: 50%;
         }
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 150px;
+            left: 46%;
+            transform: translateX(-50%);
+            z-index: 6;
+            width: 45px;
+            height: 45px;
+            background: #ccc;
+            background: url("/assets/img/marker.png") no-repeat center center / contain;
+            animation-name: marker;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+        }
     }
+}
+
+
+@keyframes marker {
+    from {top: 50px;}
+    to {top: 150px}
 }
